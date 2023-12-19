@@ -1,0 +1,138 @@
+                                          Gather game
+
+
+Time         Task                              Progress
+
+10/30 7 pm   Create Preliminary Design         See section: Preliminary Design Ideas/ Production
+                                               Requirements below
+
+10/30 7 pm   Brainstorm Aesthetics Goals       See section: Aesthetic Goals below
+
+10/30 7 pm   Brainstorm Core Loop              See section: Core Loop below
+
+11/1 5 pm    Create Player, Helper, and           -     Built objects for the player, helper platform
+             Strawberries objects                       objects, and strawberry
+                                                            - Created empty objects with a basic
+                                                                 sprite in place, and added rigid bodies,
+                                                                 colliders, and sprite renderers.
+
+
+11/1 5 pm    Create movement scripts for          -     coded preliminary movements of objects
+             objects                                       - The player moves left and right at a
+                                                               fixed speed and jumps up by applying a
+                                                               force
+                                                           - The helper platform moves up down left
+                                                               right at a fixed speed
+                                                           - Strawberry falls from the sky after
+                                                               being randomly spawned at a random x
+                                                               from the top of the screen
+
+11/1 5 pm    Create Sprites                       -     Hand drew all the sprites for each of the objects
+                                                        on notability and removed the background
+
+11/1 5 pm    Started working on the score         -     Created a score and timer class, where the score
+             and timer objects                          should count down by one and the timer should
+                                                        count down from a designated time
+
+11/2 11 am   Create Win/Lose scenes               -     Created win/lose scenes and buttons that
+                                                        redirect to the starting screen
+                                                  -     Constrained items so they no longer flip over
+                                                  -     Created a timer script that counts down
+                                                  -     Continued working on scoring logic
+
+11/2 6 pm    Fill win/lose condition              -     Made timer turn red when time less than 5
+                                                        seconds
+                                                  -     Made counter turn green when score more than
+                                                        10
+                                                  -     Made minimum score of 0
+
+11/2 6 pm    Create blueberries                   -     Created blueberry item that decreases score by
+                                                        one when user collides with them
+                                                  -     Set the winning screen when the timer is up and
+                                                        the score >=10, else set to losing screen after
+                                                                the timer is up
+
+11/2 8 pm              Create Credits + instructions        -   Wrote instructions and credit document
+                       document
+
+11/2 8 pm              Wrote Postmortem                     -   Wrote the postmortem
+
+
+
+   Preliminary Design Ideas/ Production Requirements
+       - The player moves around the screen using the up, down, left, and right keys
+       - The platform moves around using w, a, s, d keys
+       - The player must gather enough falling objects from the sky before time runs up
+
+            How it satisfies the requirements:
+                    Moving object 1: Player
+                    Moving object 2: Platform
+                    Moving object 3: Gathered item
+
+                   Interaction 1& 3: player collects the gathered item
+                   Interaction 1& 2: player jumps off of the platform
+                   Interaction 2&3: item collides with platform and disappears after 5 seconds
+
+                   Sound 1: item collected
+                   Sound 2: footstep when the player hits the platform
+
+                   UI score: X/ X items to collect
+                   UI time: XX:XX seconds left
+
+   Aesthetic Goals
+           Immersion: Create a world that is captivating with a coherent logic background system
+                       - Successful if players feel connected to the world and find the game entertaining
+                       - Unsuccessful if players report being bored by the game
+           Rapid Gratification/ simple gratification: provide immediate reward and feedback for a short and
+           simple game
+                       - Successful if users experience frequent reward feedback keeping them
+                           entertained
+                       - Unsuccessful if users lose repeatedly without getting rewards or feedback in the
+                           game
+
+   Core Loop
+   The player moves the platform, player jumps on the platform, the player collects the item
+
+
+   Post Mortem
+Summarize what you originally set out to do
+My goal was to create a game where the player could move both the player icon and the platform icon so
+the combination could move around on the screen and collect the items that fall. The platform and the
+player do not move super quickly, which requires the combination of the player and the platform to move
+relatively synchronized in order to move to the strawberries that fall and disappear after some time when
+hitting the ground.
+
+Summarize what your goals ended up being by the end
+My goal was pretty similar to what it was in the beginning. For entertainment purposes, I added a
+blueberry element that falls from the sky which behaves similarly to the strawberry but needs to be
+avoided by the player since it takes off points. This adds a level of interaction that increases the difficulty
+of the game somewhat and prevents the player from just moving back and forth and the top of the screen,
+where the strawberries spawn, and actually being involved in the game.
+
+Summarize what you accomplished in those goals
+I believe I met these goals quite well since I finished the goals that I set for myself and also created sprites
+that tell a relatively coherent story, which made sense for the player and the player to understand the goal
+of the game relatively well. The sprites work as intended and are difficult enough to require the player to
+pay attention and try the game a few times.
+
+What went right?
+The behavior that I chose for the components is relatively simple. Still, it's the combination that makes the
+game relatively entertaining to play, and the combination of time intervals, speed, and movement makes
+the game winnable without being too easy.
+
+What went wrong?
+Many debugging attempts were required to get the behavior of the items just right, but it mostly worked
+out in the game. There is a behavior that I wanted to do better, which is the respawning of items when
+moved off-screen. I would rather have the item respawn at a fixed point but feared that items would
+spawn into others, and simply let all the items spawn at the top of the screen.
+
+What do you wish you knew at the start of the project that you know now?
+I wish that I knew more about how to calculate how long the intervals and how fast the speeds of each
+process should be, because I mostly found those by trial and error, and it’d be really nice to have a plan
+for more complicated games.
+
+What did you learn in the process?
+I learned how to add a background to the games as well as create a realistic jumping movement when
+combined with other movement instructions. I also learned how to make the components not rotate and
+flip them in gameplay.
+
